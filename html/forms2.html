@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>forms</title>
+        <style>
+            *{
+                font-family: Arial;
+                box-sizing: border-box;
+            }
+            h1{
+                text-align: center;
+                text-transform: uppercase;
+                background-color: lightcyan;
+                color:darkred;
+            }
+            .form-container{
+                display:grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                justify-content:space-between;
+                background-color: #f2f2f2;
+                padding:20px;
+                border-radius: 5px;
+            }
+            /*.form-column{
+                width:100%;
+            }*/
+            label{
+                  text-transform: capitalize;
+                  padding:10px;
+            }
+            input{
+                width:100%;
+                padding:12px 20px;
+                margin:8px 0 24px 0;
+                border:1px solid #ddd;
+                border-radius:4px;
+            }
+            button{
+                width:100%;
+                background-color: blue;
+                color:white;
+                padding:12px;
+                margin:8px 0;
+                border:none;
+                border-radius: 4px;
+                cursor:pointer;
+                text-transform: uppercase;
+                transition-duration: 0.5s;
+                transition-delay: 0.5s;
+            }
+            button:hover{
+                background-color: green;
+            }
+            input[type="radio"],
+            input[type="checkbox"]{
+              width:auto;
+              margin:10px;
+            }
+            .gender,
+            .languages{
+              background:white;
+              padding:15px;
+              border-radius:8px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>BASIC FORMS</h1>
+        <form class="form-container">
+            <div>
+                <label for="fname">First Name</label>
+                <input type="text" name="first name" id="fname" placeholder="your first-name">
+            </div>
+            <div>
+                <label for="lname">Last Name</label>
+                <input type="text" name="last name" id="lname" placeholder="your last-name">
+            </div>
+            <div>
+                <label for="username">User Name</label>
+                <input type="text" name="user name" id="username" placeholder="your user-name">
+            </div>
+            <div>
+                <label for="pass">Password</label>
+                <input type="password" name="password" id="pass" placeholder="your password">
+            </div>
+            <div>
+                <label for="email">Email ID</label>
+                <input type="email" name="email id" id="email" placeholder="your email">
+            </div>
+            <div>
+                <label for="phone">Mobile number</label>
+                <input type="number" name="mobile number" id="phone" required 
+                pattern="+91 [0-9]{3} [0-9]{3} [0-9]{4}" placeholder="your mobile number">
+            </div>
+            <div>
+                <label for="web">website</label>
+                <input type="url" name="website" id="web" placeholder="website name">
+            </div>
+            <div>
+                <label for="dob">Date Of Birth</label>
+                <input type="date" name="date of birth" id="dob">
+            </div>
+            <div>
+                <label for="month">birth month</label>
+                <input type="month" name="birth month" id="month">
+            </div>
+            <div>    
+                <label for="time">time of birth</label>
+                <input type="time" name="time of birth" id="time">
+            </div>
+            <div>    
+                <label for="country">country</label>
+                  <select name="country name" id="country">
+                     <option value="india">India</option>
+                     <option value="australia">Australia</option>
+                     <option value="usa">USA</option>
+                  </select>
+            </div>
+            <div>
+                 <label for="favcolor">favourite color</label>
+                 <input type="color" name="favourite color" id="favcolor"
+                 style="height: 80px;">
+            </div>
+            <div class="gender">
+                 <p>Gender:</p>
+                   <label for="male">male</label>
+                   <input type="radio" name="Gender" id="male">
+                   <label for="female">female</label>
+                   <input type="radio" name="Gender" id="female">
+            </div>
+            <div class="languages">
+                <p>Languages Known:</p>
+                <label for="telugu">telugu</label>
+                <input type="checkbox" name="Languages" id="telugu">
+                <label for="eng">english</label>
+                <input type="checkbox" name="Languages" id="eng">
+                <label for="hin">hindi</label>
+                <input type="checkbox" name="Languages" id="hin">
+                <label for="others">others</label>
+                <input type="checkbox" name="Languages" id="others">
+            </div>
+            <div>
+                <button type="submit" id="submit">submit</button>
+            </div>
+            <div>
+                 <button type="reset" id="reset">reset</button>
+            </div>
+        </form>
+    </body>
+</html>

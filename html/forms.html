@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Tags and Attributes</title>
+</head>
+<body>
+
+    <h1>HTML Form Tags and Attributes</h1>
+
+    <form action="submit.html" method="post" enctype="multipart/form-data" autocomplete="on">
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required autofocus maxlength="40">
+            <br><br>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Only letters and numbers" pattern="[A-Za-z0-9]+" required>
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+            <br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" required minlength="6" maxlength="12">
+            <br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="9876543210" pattern="[0-9]{10}">
+            <br><br>
+
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website" placeholder="https://example.com">
+            <br><br>
+
+            <label for="search">Search:</label>
+            <input type="search" id="search" name="search" placeholder="Search here">
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Input Types</legend>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" max="60" step="1" value="18">
+            <br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+            <br><br>
+
+            <label for="meeting-time">Meeting Time:</label>
+            <input type="time" id="meeting-time" name="meeting_time">
+            <br><br>
+
+            <label for="appointment">Appointment Date and Time:</label>
+            <input type="datetime-local" id="appointment" name="appointment">
+            <br><br>
+
+            <label for="month">Select Month:</label>
+            <input type="month" id="month" name="month">
+            <br><br>
+
+            <label for="week">Select Week:</label>
+            <input type="week" id="week" name="week">
+            <br><br>
+
+            <label for="favcolor">Choose Color:</label>
+            <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+            <br><br>
+
+            <label for="range">Skill Level:</label>
+            <input type="range" id="range" name="skill_level" min="0" max="100" step="10" value="50">
+            <br><br>
+
+            <label for="file">Upload File:</label>
+            <input type="file" id="file" name="file" accept=".jpg,.jpeg,.png,.pdf">
+            <br><br>
+
+            <label for="hidden-info">Readonly Field:</label>
+            <input type="text" id="hidden-info" name="readonly_field" value="This field is readonly" readonly>
+            <br><br>
+
+            <label for="disabled-info">Disabled Field:</label>
+            <input type="text" id="disabled-info" name="disabled_field" value="This field is disabled" disabled>
+            <br><br>
+
+            <input type="hidden" name="student_id" value="12345">
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Radio Buttons and Checkboxes</legend>
+
+            <p>Gender:</p>
+            <input type="radio" id="male" name="gender" value="male" checked>
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+
+            <p>Skills:</p>
+            <input type="checkbox" id="html" name="skills" value="html" checked>
+            <label for="html">HTML</label>
+
+            <input type="checkbox" id="css" name="skills" value="css">
+            <label for="css">CSS</label>
+
+            <input type="checkbox" id="javascript" name="skills" value="javascript">
+            <label for="javascript">JavaScript</label>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Select, Option, Optgroup and Datalist</legend>
+
+            <label for="course">Select Course:</label>
+            <select id="course" name="course" required>
+                <option value="">--Select Course--</option>
+                <optgroup label="Frontend">
+                    <option value="html" selected>HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                </optgroup>
+                <optgroup label="Backend">
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                </optgroup>
+            </select>
+            <br><br>
+
+            <label for="languages">Select Multiple Languages:</label>
+            <select id="languages" name="languages" multiple size="4">
+                <option value="english">English</option>
+                <option value="hindi">Hindi</option>
+                <option value="telugu">Telugu</option>
+                <option value="tamil">Tamil</option>
+            </select>
+            <br><br>
+
+            <label for="browser">Choose Browser:</label>
+            <input list="browser-list" id="browser" name="browser" placeholder="Type or select browser">
+            <datalist id="browser-list">
+                <option value="Google Chrome">
+                <option value="Mozilla Firefox">
+                <option value="Microsoft Edge">
+                <option value="Safari">
+                <option value="Opera">
+            </datalist>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Textarea and Output</legend>
+
+            <label for="address">Address:</label>
+            <br>
+            <textarea id="address" name="address" rows="5" cols="40" placeholder="Enter your address" required></textarea>
+            <br><br>
+
+            <label for="feedback">Feedback:</label>
+            <br>
+            <textarea id="feedback" name="feedback" rows="4" cols="40" maxlength="200" placeholder="Write your feedback"></textarea>
+            <br><br>
+
+            <label>Result:</label>
+            <output name="result">Form output appears here</output>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Form Buttons</legend>
+
+            <input type="submit" value="Submit Form">
+            <input type="reset" value="Reset Form">
+            <input type="button" value="Normal Input Button">
+            <button type="submit" name="save" value="save_form">Save</button>
+            <button type="reset">Clear</button>
+            <button type="button">Click</button>
+        </fieldset>
+
+    </form>
+
+    <hr>
+
+    <h2>Form Tags Used</h2>
+    <p>form, fieldset, legend, label, input, textarea, select, option, optgroup, datalist, output, button</p>
+
+    <h2>Form Attributes Used</h2>
+    <p>action, method, enctype, autocomplete, for, id, name, type, value, placeholder, required, autofocus, maxlength, minlength, pattern, min, max, step, checked, readonly, disabled, hidden, accept, selected, multiple, size, list, rows, cols, title</p>
+
+</body>
+</html>

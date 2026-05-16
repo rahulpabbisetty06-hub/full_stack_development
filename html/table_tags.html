@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Table Tags and Attributes</title>
+    <style>
+        .example{
+            width:100%;
+            font-family:Arial, Helvetica, sans-serif;
+            border-collapse:collapse;
+        }
+        .example,.example th,.example td{
+            border:1px solid black;
+        }
+        .example caption{
+            background-color:#0B3C66;
+            color:white;
+            font-weight:bold;
+            padding: 8px;
+            font-size: 20px;
+        }
+        .example thead{
+            background-color: lightblue;
+            padding:15px;
+            font-weight: bold;
+        }
+        .example .subtab{
+            background-color:#E4ECD9;
+            padding:20px;
+            font-weight:bold;
+        }
+        .example td{
+            background-color: beige;
+            padding:20px;
+            text-align: center;
+        }
+        .example tfoot{
+            background-color: #E8E1F3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 align="center">HTML Table Example1</h1>
+
+    <table border="2"
+           cellpadding="10"
+           cellspacing="5"
+           width="70%"
+           height="300"
+           align="center"
+           bgcolor="lightblue">
+
+        <!-- Table Caption -->
+        <caption><b>Student Details Table</b></caption>
+
+        <!-- Table Heading Row -->
+        <tr bgcolor="yellow">
+
+            <th>Name</th>
+            <th>Age</th>
+            <th>Course</th>
+            <th>Marks</th>
+
+        </tr>
+
+        <!-- Row 1 -->
+        <tr align="center">
+
+            <td>Rahul</td>
+            <td>21</td>
+            <td>B.Tech</td>
+            <td>85</td>
+
+        </tr>
+
+        <!-- Row 2 -->
+        <tr align="center">
+
+            <td>Anil</td>
+            <td>22</td>
+            <td>BCA</td>
+            <td>90</td>
+
+        </tr>
+
+        <!-- Row 3 -->
+        <tr align="center">
+
+            <td colspan="2">Priya</td>
+            <td>MCA</td>
+            <td rowspan="2">95</td>
+
+        </tr>
+
+        <!-- Row 4 -->
+        <tr align="center">
+
+            <td>Ravi</td>
+            <td>23</td>
+            <td>M.Tech</td>
+
+        </tr>
+
+    </table>
+    
+    <br><br>
+    <h1 align="center">HTML Table Example2</h1>
+    <table class="example">
+        <caption>STUDENT MARKS REPORT</caption>
+        <thead>
+            <tr>
+                <th rowspan="2">STUDENT DETAILS (VERTICAL HEADER)</th>
+                <th rowspan="2">SEMESTER</th>
+                <th colspan="4" class="subtab">SUBJECTS(HORIZONTAL HEADER)</th>
+            </tr>
+            <tr class="subtab">
+                <th>HTML</th>
+                <th>CSS</th>
+                <th>JAVASCRIPT</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Rahul</th>
+                <td>Sem 1</td>
+                <td>90</td>
+                <td>85</td>
+                <td>80</td>
+                <td>255</td>
+            </tr>
+            <tr>
+                <th>Anjali</th>
+                <td>Sem 1</td>
+                <td>88</td>
+                <td>92</td>
+                <td>79</td>
+                <td>259</td>
+            </tr>
+            <tr>
+                <th>Kiran</th>
+                <td>Sem 2</td>
+                <td>95</td>
+                <td>91</td>
+                <td>89</td>
+                <td>275</td>
+            </tr>
+            <tr>
+                <th>Meera</th>
+                <td>Sem 2</td>
+                <td>78</td>
+                <td>82</td>
+                <td>85</td>
+                <td>245</td>
+            </tr>
+            <tr>
+                <th>Arjun</th>
+                <td>Sem 3</td>
+                <td>92</td>
+                <td>93</td>
+                <td>94</td>
+                <td>279</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td colspan="2">CLASS AVERAGE</td>
+            <td>88.6</td>
+            <td>88.6</td>
+            <td>85.4</td>
+            <td>262.6</td>
+        </tfoot>
+    </table>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Hover effects and Transitions</title>
+        <style>
+            button{
+                background-color: green;
+                color:white;
+            }
+            button:hover{
+                background-color: red;
+                color:yellow;
+            }
+            .property-example{
+                background-color: blue;
+                color:white;
+                width:300px;
+                text-align: center;
+                padding: 50px;
+                height: 20px;
+                transition-property:background-color,width,height,color;
+                transition-duration:3s;
+                transition-timing-function:ease-in-out ;
+                transition-delay:2s;
+            }
+            .property-example:hover{
+                background-color: green;
+                color:lightcoral;
+                width:500px;
+                height: 50px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Hover Effect</h1>
+        <center><button style="font-size: larger; border: 50; padding:10px ;"> Click Me!</button></center>
+        <br><br>
+        <div class="property-example">Hover Over Me!</div>
+    </body>
+</html>

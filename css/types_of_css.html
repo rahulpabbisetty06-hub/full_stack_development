@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>tyoes of css</title>
+        <style>
+            :root{
+                --main-bg-color:lightgrey;
+                --font-family:arial;         /*CSS VARIABLES*/
+                --font-color:yellow;
+            }
+            body{
+               background-color: var(--main-bg-color);
+               font-family: var(--font-family);
+               color:var(--font-color);
+            }
+            h2{
+                text-align:center;
+                direction:rtl;
+                color:red;
+                background-color:yellow;
+                font-family:"sans-serif",serif fantasy;
+            }
+        </style>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Inline CSS</h1>
+        <p style="color:green; font-size:20px; text-align:right;">This is a inline css.</p>
+        <hr><hr>
+        <h1>Internal CSS</h1>
+        <h2>this is the internal css.</h2>
+        <hr><hr>
+        <h1>External CSS</h1>
+        <footer>this is the external css.</footer>
+        <hr><hr>
+        <h1>Defining the colors</h1>
+        <p style="background-color:lavender">this is named color</p>
+        <p style="background-color:#ff0000">this is hex decimal code</p>
+        <p style="background-color:rgba(255,0,0,0.5)">this is RGBA color format</p>
+        <p style="background-color:hsla(99, 78%, 25%, 1)">this is HSLA color format</p>
+        <hr><hr>
+        <h1>Border Attributes</h1>
+        <p style="border:5px solid purple">This is a solid border.</p>
+        <p style="border:4px dashed violet">This is a dashed border.</p>
+        <p style="border:3px dotted forestgreen">This is a dotted border.</p>
+        <p style="border:10px double gold">This is a double border.</p>
+        <p style="border:5px groove darkcyan">This is a grooved border.</p>
+    </body>
+</html>

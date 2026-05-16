@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>css selectors</title>
+        <style>
+            #id-selector{
+                color:chocolate;
+                background-color: lawngreen;
+                text-transform:uppercase ;
+                font-size: 20px
+            }
+            .class-selector{
+                color:blue;
+                background-color: aquamarine;
+                text-indent: 3px;
+                text-shadow: 4px;
+                text-decoration-style: wavy;
+                font-display: inherit;
+                font-style: oblique;
+            }
+            *{
+                background-color: lightcyan;
+                text-transform: none;   /*universal selector*/
+                text-align:center;
+            }
+            span{
+                color:orange;
+                background-color: red;
+                direction: rtl;
+            }
+            h2,button{
+                padding:30px;
+                color:goldenrod;
+                background-color: yellowgreen;
+                border:2px dotted black;
+            }
+            div p{
+                color:blueviolet;
+                background-color: lawngreen;
+                padding:20px;
+                border:1px solid;
+            }
+            div > strong{
+                color:indigo;
+            }
+            h1 + footer{
+              color:red;
+           }
+           h1 ~ header{
+              color:blue;
+           }
+           button[type]{
+               color:honeydew;
+               padding: 30px;
+               background-color: black;
+           }
+           [input]{
+                color:seagreen;
+                background-color: beige;
+           }
+           button[type="text"]{
+             border: 10px dashed palegreen;
+           }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center; color:red;">ID selector</h1>
+        <p id="id-selector">this text is displayed by using id selector.</p>
+        <br><hr><hr>
+        <h1 style="text-align: center; color:red;">Class selector</h1>
+        <p class="class-selector">this text is displayed by using class selector.</p>
+        <br><hr><hr>
+        <h1 style="text-align: center; color:red;">Element selector</h1>
+        <span>this text is displayed by using element selector.</span>
+        <br><hr><hr>
+        <h1 style="text-align: center; color:red;">group selector</h1>
+        <h2>group selector</h2>
+        <!--<button>click me!</button>-->
+        <br><hr><hr>
+        <h1 style="text-align: center; color:red;">Descendent selector</h1>
+          <div>this is div
+            <p>this text is descendent selector.</p>
+          </div>
+        <br><hr><hr>
+        <h1 style="text-align: center; color:red;">Child selector</h1>
+          <div>
+            <strong>this text is child selector.</strong>
+          </div>
+        <br><hr><hr>
+        <h1 style="text-align: center; color:red;">adjacent sibling selector</h1>
+        <div>  
+          <h1>Title</h1>
+          <footer>Hello</footer>
+        </div>
+        <br><hr><hr>
+        <h1 style="text-align: center; color:red;">general sibling selector</h1>
+        <div>  
+          <h1>Title</h1>
+          <header>Hello</header>
+        </div>
+        <br><hr><hr>
+        <h1 style="text-align: center; color:red;">attribute selector</h1>
+        <button type="number" input="text">submit</button>
+        <button type="text" input="details">reset</button>
+        <br><hr><hr>
+    </body>
+</html>
