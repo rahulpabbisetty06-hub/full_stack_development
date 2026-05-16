@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Inheritance and cascade</title>
+     <style>
+        h1{
+            text-align: center;
+            color: brown;
+            text-shadow: 10px;
+            text-transform: capitalize;
+        }
+       .parent-text{
+            color:blue;
+            font-family: arial;
+            font-size:20px;
+        }
+        .child-text{
+            color:darkred;
+        }
+        .source-order p{
+            color:red;
+        }
+        .source-order p{
+            color:blue;
+        }
+        .so-inheritance section{
+            text-transform: capitalize;
+        }
+        .sorder-in{
+            text-transform: uppercase;
+        }
+        .example{
+            color:purple;
+        }
+        #unique{
+            color:crimson;
+        }
+        #parent-specifity{
+            background-color: aqua;
+        }
+        .child-specifity{
+            background-color: coral;
+        }
+        [data-example]{
+            color:brown;
+        }
+        .attr{
+            color:violet;
+        }
+        #attribute-example{
+            color:magenta;
+        }
+        .basic{
+            background-color:yellow;
+        }
+        .basic{
+            background-color: orange !important;
+        }
+     </style>
+</head>
+<body>
+    <h1>Inheritance</h1>
+    <section class="parent-text">
+        <p>
+            this is parent text
+        </p>
+        <p class="child-text">
+            this is child text
+        </p>
+    </section>
+    <br><hr><hr>
+    <h1>cascade</h1>
+    <h1>source order of styles</h1>
+    <section class="source-order">
+        <p>source order of styles</p>
+    </section>
+    <hr>
+    <h1>source order of styles by inheritance</h1>
+    <section class="so-inheritance">
+        <div class="sorder-in">
+            <p>source order of styles by inheritance/specifity</p>
+        </div>
+    </section>
+    <br><hr><hr>
+    <h1>specifity</h1>
+    <section>
+        <p style="color:green;text-transform: uppercase;" class="example" id="unique">rules for specifity</p>
+    </section>
+    <hr>
+    <h1>specifity along inheritance</h1>
+    <section>
+        <div id="parent-specifity">
+            <p class="child-specifity">specifity along with inheritance</p>
+        </div>
+    </section>
+    <hr>
+    <h1>attribute selectors</h1>
+    <section>
+        <p id="attribute-example" class="attr" data-example="value">attibute selectors</p>
+    </section>
+    <br><hr><hr>
+    <h1>importance rule</h1>
+    <h1>!important flag</h1>
+    <section>
+        <p class="basic">the use of important flag</p>
+    </section>
+</body>
+</html>
