@@ -7,3 +7,224 @@ footer{
                 font-weight: 700;
                 font-variant: small-caps;
 }
+/* =========================================
+   DEFAULT STYLES (Desktop First)
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    padding:40px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    font-size:50px;
+}
+
+.card{
+    background:royalblue;
+    color:white;
+    padding:50px;
+    font-size:30px;
+    text-align:center;
+    border-radius:15px;
+}
+
+
+
+/* =========================================
+   MOBILE DEVICES
+   max-width:600px
+========================================= */
+
+@media(max-width:600px){
+
+    body{
+        background:lightpink;
+    }
+
+    h1{
+        font-size:25px;
+        color:red;
+    }
+
+    .card{
+        background:tomato;
+        font-size:18px;
+        padding:20px;
+    }
+
+}
+
+
+
+/* =========================================
+   MOBILE PORTRAIT
+========================================= */
+
+@media(max-width:600px) and (orientation:portrait){
+
+    body{
+        background:lightyellow;
+    }
+
+    .card{
+        border:5px solid orange;
+    }
+
+}
+
+
+
+/* =========================================
+   MOBILE LANDSCAPE
+========================================= */
+
+@media(max-width:600px) and (orientation:landscape){
+
+    body{
+        background:lightgreen;
+    }
+
+    .card{
+        border:5px solid green;
+    }
+
+}
+
+
+
+/* =========================================
+   TABLET DEVICES
+   601px - 992px
+========================================= */
+
+@media(min-width:601px) and (max-width:992px){
+
+    body{
+        background:lightblue;
+    }
+
+    h1{
+        font-size:40px;
+        color:darkblue;
+    }
+
+    .card{
+        background:blue;
+        font-size:24px;
+        padding:35px;
+    }
+
+}
+
+
+
+/* =========================================
+   TABLET PORTRAIT
+========================================= */
+
+@media(min-width:601px) and (max-width:992px) and (orientation:portrait){
+
+    body{
+        background:#dfe6e9;
+    }
+
+    .card{
+        border:5px solid purple;
+    }
+
+}
+
+
+
+/* =========================================
+   TABLET LANDSCAPE
+========================================= */
+
+@media(min-width:601px) and (max-width:992px) and (orientation:landscape){
+
+    body{
+        background:#c7ecee;
+    }
+
+    .card{
+        border:5px solid navy;
+    }
+
+}
+
+
+
+/* =========================================
+   DESKTOP DEVICES
+   min-width:993px
+========================================= */
+
+@media(min-width:993px){
+
+    body{
+        background:#f5f6fa;
+    }
+
+    h1{
+        font-size:60px;
+        color:black;
+    }
+
+    .card{
+        background:#2f3640;
+        font-size:32px;
+        padding:60px;
+    }
+
+}
+
+
+
+/* =========================================
+   DESKTOP PORTRAIT
+========================================= */
+
+@media(min-width:993px) and (orientation:portrait){
+
+    body{
+        background:#ffeaa7;
+    }
+
+    .card{
+        border:6px solid brown;
+    }
+
+}
+
+
+
+/* =========================================
+   DESKTOP LANDSCAPE
+========================================= */
+
+@media(min-width:993px) and (orientation:landscape){
+
+    body{
+        background:#dff9fb;
+    }
+
+    .card{
+        border:6px solid black;
+    }
+
+}

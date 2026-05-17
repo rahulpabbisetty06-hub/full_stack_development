@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Flexbox</title>
+    <style>
+        
+/* =========================================
+   GLOBAL STYLES
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f4f4;
+    padding:40px;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:50px;
+}
+
+
+
+/* =========================================
+   FLEX CONTAINER
+========================================= */
+
+.container{
+
+    background:white;
+    border:5px solid black;
+    padding:20px;
+
+    /* FLEXBOX */
+    display:flex;
+
+    /* FLEX DIRECTION */
+    flex-direction:row;
+
+    /* JUSTIFY CONTENT */
+    justify-content:space-evenly;
+
+    /* ALIGN ITEMS */
+    align-items:center;
+
+    /* FLEX WRAP */
+    flex-wrap:wrap;
+
+    /* GAP */
+    gap:20px;
+
+    /* ROW GAP */
+    row-gap:40px;
+
+    /* COLUMN GAP */
+    column-gap:20px;
+
+    min-height:600px;
+
+}
+
+
+
+/* =========================================
+   FLEX ITEMS
+========================================= */
+
+.box{
+
+    width:200px;
+    height:200px;
+
+    color:white;
+    font-size:30px;
+    font-weight:bold;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:15px;
+
+}
+
+
+
+/* =========================================
+   BOX COLORS
+========================================= */
+
+.box1{
+    background:red;
+}
+
+.box2{
+    background:blue;
+}
+
+.box3{
+    background:green;
+}
+
+.box4{
+    background:orange;
+}
+
+.box5{
+    background:purple;
+}
+
+.box6{
+    background:brown;
+}
+
+
+
+/* =========================================
+   FLEX-GROW
+========================================= */
+
+.box1{
+
+    flex-grow:1;
+
+}
+
+
+
+/* =========================================
+   FLEX-SHRINK
+========================================= */
+
+.box2{
+
+    flex-shrink:2;
+
+}
+
+
+
+/* =========================================
+   FLEX-BASIS
+========================================= */
+
+.box3{
+
+    flex-basis:300px;
+
+}
+
+
+
+/* =========================================
+   FLEX SHORTHAND
+   flex: grow shrink basis
+========================================= */
+
+.box4{
+
+    flex:1 1 250px;
+
+}
+
+
+
+/* =========================================
+   ALIGN-SELF
+========================================= */
+
+.box5{
+
+    align-self:flex-start;
+
+}
+
+
+
+/* =========================================
+   ORDER
+========================================= */
+
+.box6{
+
+    order:-1;
+
+}
+
+
+
+/* =========================================
+   HOVER EFFECT
+========================================= */
+
+.box{
+
+    transition:0.5s;
+}
+
+.box:hover{
+
+    transform:scale(1.1);
+}
+
+
+
+/* =========================================
+   RESPONSIVE FLEXBOX
+========================================= */
+
+@media(max-width:768px){
+
+    .container{
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:center;
+    }
+
+}
+    </style>
+</head>
+<body>
+
+    <h1>Complete Flexbox Example</h1>
+
+    <div class="container">
+
+        <div class="box box1">Box 1</div>
+        <div class="box box2">Box 2</div>
+        <div class="box box3">Box 3</div>
+        <div class="box box4">Box 4</div>
+        <div class="box box5">Box 5</div>
+        <div class="box box6">Box 6</div>
+
+    </div>
+
+</body>
+</html>
