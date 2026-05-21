@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title>
+            objects and arrays exercise
+        </title>
+    </head>
+    <body>
+        <script>
+            //object creation
+            let car={
+                brand:"audi",
+                manufacture:2020,
+                color:"black",
+                "model":"7series"
+            }
+            console.log(car);
+            //accessing properties from an object
+            console.log(car.brand);
+            console.log(car["model"]);
+            //another way of creating objects in js
+            let car1 = new Object();
+            car1.brand="bmw";
+            car1.color="white";
+            car1.model="2series";
+            console.log(car1);
+            //accessing properties from an object
+            console.log(car1.brand);
+            console.log(car1.model);
+            
+            //mutability - changeble
+            let car2={
+                brand:"audi",
+                manufacture:2022,
+                color:"red",
+                model:"5series"
+            }
+            console.log("original car copy:",car2);
+            let carcopy=car2;
+            carcopy.color="yellow";
+            console.log("modified car copy:",carcopy);
+            //spreading operator
+            let newcar={...car};
+            console.log("new car",newcar);
+            newcar.color="orange";
+            console.log(newcar);
+            //Nested objects
+            car3={
+                 brand:"audi",
+                manufacture:2022,
+                color:"red",
+                model:"5series",
+                owner:{
+                    name:"jhon",
+                    age:40
+                }
+            }
+            //accessing the nested objects
+            console.log("Name  of the owner:",car3.owner.name);
+            car3.owner.name="mark";
+            console.log(car3);
+
+            let car4 = structuredClone(car3);
+            console.log(car4);
+
+            //arrays
+            let fruits=["mango","banana","orange"];
+            console.log(fruits);
+            //accessing items from an array
+            console.log(fruits[1]);
+            // another way
+            let fruits1= new Array("grapes","pine apple");
+            console.log(fruits1);
+            fruits1.push("mango");
+            console.log("after push:",fruits1);
+            let newfruits=[...fruits1];
+            fruits1.pop();
+            console.log(fruits1);
+
+            //nested arrays
+            let nest_arr=[1,2,3,["apple","pine apple"],4,5];
+            console.log(nest_arr[3][1]);
+
+
+            //function decleration in 3 ways
+            //1. normal way
+            function message(name){
+                console.log(`hello! my dear ${name}`);
+            }
+            message("rahul");
+
+            //2. function expression
+            const sayWelcome = function(name){
+                 console.log(`welcome! ${name}`);
+            }
+            sayWelcome("sita");
+
+            //3.arrow function
+            const sayGoodBye=(name) => {console.log(`good bye ${name}`);}
+            sayGoodBye("rama");
+
+            //methods
+            let calculator={
+                num1:20,
+                num2:25,
+                sum:function(){
+                    return this.num1 + this.num2;
+                }
+            }
+            console.log(calculator.sum());
+
+            let student = {
+                name: "Rahul",
+                age: 20,
+                course: "JavaScript",
+
+                showDetails: function () {
+                    console.log("Name:", this.name);
+                    console.log("Age:", this.age);
+                    console.log("Course:", this.course);
+                },
+
+                updateAge: function (newAge) {
+                    this.age = newAge;
+                    console.log("Updated age:", this.age);
+                }
+            };
+
+            student.showDetails();
+
+            student.updateAge(21);
+
+            student.showDetails();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>basic js</title>
+    </head>
+    <body>
+        <script>
+            //single-line comments
+            /*---
+              ---
+                multi-line comments
+              ---
+              ---*/
+            //types of variable decleration
+            //1.using let keyword
+            let _name="james";
+            console.log(_name);
+            //2.using var keyword
+            var marks=50;
+            var marks=70;
+            console.log(marks);
+            //3.const keyword
+            const example="hello";
+            console.log(example);
+
+            // JavaScript Datatypes Example
+
+            let name = "John";              // String
+            console.log("String:", name, "Type:", typeof name);
+            let age = 25;                   // Number
+            console.log("Number:", age, "Type:", typeof age);
+            let isStudent = true;           // Boolean
+            console.log("Boolean:", isStudent, "Type:", typeof isStudent);
+            let address;                    // Undefined
+            console.log("Undefined:", address, "Type:", typeof address);
+            let emptyValue = null;          // Null
+            console.log("Null:", emptyValue, "Type:", typeof emptyValue);
+            let biginteger = BigInt(12345678);     // BigInt
+            console.log("BigInt:", biginteger, "Type:", typeof biginteger);
+            let uniqueId = Symbol("id");    // Symbol
+            console.log("Symbol:", uniqueId, "Type:", typeof uniqueId);
+
+            let person = {                  // Object
+            name: "John",
+            age: 25
+            };
+            console.log("Object:", person, "Type:", typeof person);
+
+            let colors = ["red", "green", "blue"]; // Array
+            console.log("Array:", colors, "Type:", typeof colors);
+            
+            //template literals and dtring interpolation
+            let greeting=`Hello! ${name} `;
+            console.log(greeting);
+        </script>
+    </body>
+</html>
