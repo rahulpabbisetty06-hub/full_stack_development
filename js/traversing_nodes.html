@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>traversing the nodes.</title>
+          <style>
+            .container {
+                background-color: lightgray;
+                padding: 10px;
+                margin: 20px 0;
+            }
+            .child {
+                background-color: lightblue;
+                padding: 10px;
+                margin: 5px 0;
+            }
+          </style>
+    </head>
+    <body>
+        <div id="container" class="highlight">
+            <p id="paragraph">this is the para inside div</p>
+            <span>some extra content in span</span>
+        </div>
+        <!--first comment-->
+        <div>
+            <!--inner comment-->
+            <p id="textNodeExample">some text here</p>
+        </div>
+
+         <h1>Understanding childNodes vs children</h1>
+
+        <!-- Parent Container -->
+        <div class="container" id="parent">
+        <!-- Text Node between divs -->
+        <div class="child">First Child (Element)</div>
+        <!-- This is a text node -->
+        <div class="child">Second Child (Element)</div>
+        <span>This is a span (Element)</span>
+        </div>
+
+        <!-- Empty Container with Text Nodes -->
+        <div class="container" id="parent2">
+        First text node.
+        <!-- This is a comment node -->
+        <span>This is another span (Element)</span>
+        Second text node.
+        </div>
+
+        <h1>Understanding First and Last Child/Element</h1>
+
+        <!-- Parent Container -->
+        <div class="container" id="parent1">
+        <!-- Text Node between divs -->
+        <div class="child">First Child (Element)</div>
+        <!-- This is a text node -->
+        <div class="child">Second Child (Element)</div>
+        <span>This is a span (Element)</span>
+        </div>
+
+        <h1>Selecting Siblings of Nodes in the DOM</h1>
+
+        <!-- Sibling Nodes -->
+        <div id="first-sibling" class="sibling">First Sibling</div>
+        <!-- Text Node -->
+        This is a text node between siblings.
+        <div id="second-sibling" class="sibling">Second Sibling</div>
+        <div id="third-sibling" class="sibling">Third Sibling</div>
+
+        <h1>Understanding nodeName and nodeType</h1>
+
+    <div class="container" id="sample-element">This is a sample element.</div>
+        <script src="script1.js" defer></script>
+    </body>
+</html>
